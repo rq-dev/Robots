@@ -39,7 +39,7 @@ public class MainApplicationFrame extends JFrame
             @Override
             public void windowClosing(WindowEvent e) {
                 MainApplicationFrame.confirmExit();
-                setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+//                setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
             }
         });
 
@@ -48,7 +48,7 @@ public class MainApplicationFrame extends JFrame
         addWindow(gameWindow);
 
         setJMenuBar(generateMenuBar());
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
     }
 
     protected LogWindow createLogWindow()
@@ -155,7 +155,7 @@ public class MainApplicationFrame extends JFrame
     public static void confirmExit()
     {
         JFrame frame = new JFrame("Exit confirmation frame");
-        frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+//        frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         String[] options = { "Да", "Нет" };
         int n = JOptionPane.showOptionDialog(frame, "Вы действительно хотите закрыть приложение?",
                 "Подтверждение", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, null);
