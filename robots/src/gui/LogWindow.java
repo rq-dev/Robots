@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 import log.LogChangeListener;
 import log.LogEntry;
 import log.LogWindowSource;
+import javax.swing.*;
 
 public class LogWindow extends JInternalFrame implements LogChangeListener
 {
@@ -22,7 +23,10 @@ public class LogWindow extends JInternalFrame implements LogChangeListener
         m_logSource = logSource;
         m_logSource.registerListener(this);
         m_logContent = new TextArea("");
-        m_logContent.setSize(200, 500);
+        m_logContent.setSize(300, 400);
+
+
+
         
         JPanel panel = new JPanel(new BorderLayout());
         panel.add(m_logContent, BorderLayout.CENTER);
