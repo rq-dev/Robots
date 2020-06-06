@@ -12,7 +12,7 @@ import log.LogEntry;
 import log.LogWindowSource;
 import javax.swing.*;
 
-public class LogWindow extends JInternalFrame implements LogChangeListener
+public class LogWindow extends SavebleInternalFrame implements LogChangeListener
 {
     private LogWindowSource m_logSource;
     private TextArea m_logContent;
