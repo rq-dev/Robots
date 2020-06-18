@@ -1,6 +1,7 @@
 package gui;
 
 import javax.swing.*;
+import java.beans.PropertyVetoException;
 
 public class SavebleInternalFrame extends JInternalFrame implements ISaveable {
 
@@ -14,8 +15,8 @@ public class SavebleInternalFrame extends JInternalFrame implements ISaveable {
             setIcon(windowState.getIconified());
             setMaximum(windowState.getMaximized());
         }
-        catch (Exception e) {
-            System.out.println("Exception!");
+        catch (PropertyVetoException e) {
+            System.out.println(e.getMessage());
         }
         setLocation(windowState.getLocation());
         setSize(windowState.getDimension());

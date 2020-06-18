@@ -7,7 +7,7 @@ import java.util.List;
 
 public class WindowStatesDepot {
 
-    private static File file = new File(System.getProperty("user.home") + "/WindowSettings.dat");
+    private static File file = new File(System.getProperty("user.home") + File.separator + "WindowSettings.dat");
     private static List<ISaveable> saveableList = new ArrayList<>();
 
     public static void save() {
